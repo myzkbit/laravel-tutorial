@@ -48,7 +48,7 @@ class TaskController extends Controller
     }
 
     /**
-     * GET /folders/{folder}/tasks/{task_id}/edit
+     * GET /folders/{folder}/tasks/{task}/edit
      */
     public function showEditForm(Folder $folder, Task $task)
     {
@@ -60,7 +60,7 @@ class TaskController extends Controller
     }
 
     /**
-     * POST /folders/{folder}/tasks/{task_id}/edit
+     * POST /folders/{folder}/tasks/{task}/edit
      */
     public function edit(Folder $folder, Task $task, EditTask $request)
     {
