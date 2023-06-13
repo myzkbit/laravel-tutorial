@@ -19,6 +19,12 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
+
+        // if (Auth::guard($guard)->check()) {
+        //     return redirect('/'); // ★ 引数を変更
+        // }
+
+        // return $next($request);
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
