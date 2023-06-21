@@ -1,7 +1,7 @@
 version: '3'
 services:
     app:
-        container_name: laravel-starter-app
+        container_name: laravel-tutorial-app
         build: ./docker/php
         volumes:
             - ./src:/var/www
@@ -18,7 +18,7 @@ services:
             - app
     db:
         image: mysql:5.7
-        container_name: laravel-starter-db
+        container_name: laravel-tutorial-db
         environment:
             MYSQL_DATABASE: ${DB_DATABASE}
             MYSQL_USER: ${DB_USERNAME}
